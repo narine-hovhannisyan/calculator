@@ -1,10 +1,15 @@
 import {useState} from "react";
-import './App.css';
 import ReactDOM from "react-dom/client";
- function Counter() {
 
-     const[counter,setcounter]=useState(null);
-     const[count,setcount]=useState(null);
+// Styles
+import './App.css';
+
+// Components
+import Headerxxx from './Components/Header';
+
+ function Counter() {
+     const [counter, setcounter] = useState(null);
+     const [count, setcount] = useState(null);
      const [updated, setUpdated] = useState(counter);
      const [changed, setchanged] = useState(count);
      const [answer, setanswer] = useState(0);
@@ -42,7 +47,8 @@ import ReactDOM from "react-dom/client";
      }
      return (
          <div className="counter">
-             <h1>Calculator</h1>
+             <Headerxxx text='Calculator' color='red' />
+             <Headerxxx text='Calculator2' color='green' />
              {/*first input*/}
              <input
                  type = "number"
